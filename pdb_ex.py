@@ -10,18 +10,18 @@ while True:
 
     pdb.set_trace()
 
-    num1 = 
-    answer = input("What is {} times {}? ".format(
-        choice(random2), choice(random1)))
+    num1 = choice(random2)
+    num2 = choice(random1)
+    answer = input("What is {} times {}? ".format(num1, num2))
     
     # exit
     if answer == "exit":
         print("Now exiting game!")
         sys.exit()
 
-    test = int(choice(random2))*int(choice(random1))
     # determine if number is correct
-    #elif answer == choice(random2) * choice(random1):
-    #    print("Correct!")
-    #else:
-    #    print("Wrong!")
+    elif int(answer) == num2 * num1:
+        print("Correct!")
+        break
+    else:
+        print("Wrong!")
